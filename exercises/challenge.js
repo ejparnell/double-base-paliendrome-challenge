@@ -18,10 +18,18 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 
 This question is from - https://projecteuler.net/problem=36
 */
-const doubleBasePalindromeSum = function (/* base1, base2, upperLimit */) {
+const doubleBasePalindromeSum = function (b1, b2 , upper) {
+let sum = 0
 
+for (i = 0; i <= upper; i++) {
+      if(i.toString(b1) === b1.split('').reverse().join('') && b2 === b2.split('').reverse().join('')) {
+            sum += i 
+      } 
+}
+console.log(sum)
 }
 
+doubleBasePalindromeSum(2,10,1000000)
 
 // DO NOT MODIFY
 module.exports = {
